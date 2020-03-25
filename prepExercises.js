@@ -8,6 +8,15 @@
 //  sum(4); // => 10 
 //  sum(5); // => 15
 
+function sum(n){
+	var i = 0;
+	var total= 0;
+	while(n >= i){
+		total += i;
+		i++;
+	}
+	return total;
+}
 
 
 // 2.Factorial of n: The factorial of n is the product of all the integers preceding n, starting with 1, e.g.:
@@ -18,7 +27,15 @@
 //  factorial(4); // => 24 
 //  factorial(5); // => 120
 
-
+function factorial(n){
+	var i= 1;
+	var total= 1;
+	while (i <= n){
+		total*= i;
+		i++;
+	}
+	return total;
+}
 
 // 3.Repeating a String n Times: Let's write a function called repeatString that takes two parameters: a string str, which is the string to be repeated, and count -- a number representing how many times the string s should be repeated, e.g.
 //  function repeatString(str, count) { 
@@ -30,12 +47,23 @@
 //  repeatString('dog', 3); // => 'dogdogdog'
 // Your task is to implement the repeatString function using a while loop.
 
-
+function repeatString(str, count){
+	var i= 0;
+	var string= '';
+	while (i < count){
+		string+= str;
+		i++;
+	}
+	return string;
+}
 
 
 // More Practice
 // 1.Go back through any of the exercises done in the introduction to repetition and refactor them to use the while loop.
-
+function stringLength(str){
+	var newString ='';
+	
+}
 
 // 2.Fencepost Loop: Use a while loop to build a single string with the numbers 1 through n, separated by commas. Have it return the new string. How can we make sure not to have a comma after the last number?
 //  function counting(n) { 
@@ -45,7 +73,15 @@
 //  counting(1); // => '1' 
 //  counting(3); // => '1, 2, 3'
 
-
+function counting(n){
+	var i = 2;
+	var string = '1';
+	while (i <= n){
+		string = string + ',' + i;
+		i++;
+	}
+	return string;
+}
 
 
 // 3.Meet & Greet: n numbers are coming to a party for numbers. Introduce them each to all the guests as they arrive. You should end up with output looking something like this one for n = 5:
@@ -67,11 +103,33 @@
 //  reverseString('1#*$'); // => '$*#1'
 // Do this using a while loop.
 
+function reverseString(str){
+	var string = '';
+	var i= str.length -1;
+	while (i>= 0){
+        string =string + str[i]; 
+		i--;
+	}
+	return string;
+}
 
 
 // 5.Write a javascript program to print all Prime numbers from 1 to n.
 
+function prime(n){
+	var i= 1;
+	var counter = 0;
+	while(i<= n){
+		if (n%2 === 0){
+			i++;
+			counter++;
+		}
+	}
+if (counter === 0){
+  
+}
 
+}
 
 
 // 6.Write a JavaScript for loop that will iterate from 0 to n. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
