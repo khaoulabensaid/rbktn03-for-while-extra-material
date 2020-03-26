@@ -54,7 +54,18 @@ function max(array){
 //  Use split to write a function longestWord that takes a string as an argument and returns the longest word.
 
 function longestWord(string){
+	var array= string.split(' ');
+	var str;
+	var str1 = array[0];
 	
+	for (var i=0; i< array.length; i++){
+		
+		if (array[i].length> str1.length){
+          str= array[i];;
+		}
+		
+	}
+	return str;
 }
 
 // 4.Write a function remove that accepts an array and an element, and returns an array with all ocurrences of element removed.
@@ -63,7 +74,34 @@ function longestWord(string){
 //  // your code here
 //  }
 //  remove([1, 3, 6, 2, 3], 3); // => [1, 6, 2]
+
+function remove(array, element){
+
+	var newArray;
+
+	for (var i=0; i< array.length; i++){
+		if(array[i] === element){
+			newArray = array.splice(i, 1);
+		}
+	}
+	return array;
+}
+
+function remove(array, element){
+	var i= 0;
+	var newArray;
+	while (i < array.length){
+		if(array[i] === element){
+			newArray = array.splice(i, 1);
+		}
+		i++;
+	}
+	return array;
+}
+
 // 5.Write a function evens that accepts an array as an argument, and returns an array consisting of all of the even numbers in that array.
+
+
 
 // More Practice
 // 1.Write a function called average that takes an array of numbers as a parameter and returns the average of those numbers.
