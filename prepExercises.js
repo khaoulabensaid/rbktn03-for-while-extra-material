@@ -61,7 +61,7 @@ function repeatString(str, count){
 // More Practice
 // 1.Go back through any of the exercises done in the introduction to repetition and refactor them to use the while loop.
 function stringLength(str){
-	var newString ='';
+	var i= 0;
 	
 }
 
@@ -116,20 +116,33 @@ function reverseString(str){
 
 // 5.Write a javascript program to print all Prime numbers from 1 to n.
 
-function prime(n){
-	var i= 1;
-	var counter = 0;
-	while(i<= n){
-		if (n%2 === 0){
-			i++;
-			counter++;
-		}
+function isPrime(n){
+	var i= 2;
+	if (n<2){
+		return "choose again";
 	}
-if (counter === 0){
-  
+	while (i < n){
+		if (n%i === 0){
+			return false;
+		} 
+		i++
+      
+}return true; 
+ 
 }
 
-}
+function prime(n){
+	var i=2;
+	var result= '';
+	while (i<= n){
+		if (isPrime(i)){
+			result= result+ i+',';
+		}
+		i++;
+	}	
+	return result.slice(0, result.length-1);
+} 
+
 
 
 // 6.Write a JavaScript for loop that will iterate from 0 to n. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
@@ -139,12 +152,30 @@ if (counter === 0){
 //  '2 is even'
 
 
+function check(n){
+   
+	for (var i=0; i<= n; i++){
+		if (i%2 === 0){
+			alert(i + ' is even');
+	} else {
+		alert( i +' is odd');
+	}
+}
+}
 
 
 // 7.Write a javascript program to enter any number and print all factors of the number.
 
-
-
+function factors(n){
+	var result= '' ;
+	for (var i= 0; i<= n; i++){
+		if (n%i=== 0){
+			result+= i + ',' ;
+		} 
+	}
+	return result.slice(0, result.length - 1);
+	
+}
 
 
 // Advanced
