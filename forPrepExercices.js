@@ -60,13 +60,28 @@ function longestWord(string){
 	
 	for (var i=0; i< array.length; i++){
 		
-		if (array[i].length> str1.length){
-          str= array[i];;
+		if (array[i].length>=str1.length){
+          str= array[i];
 		}
 		
 	}
 	return str;
 }
+
+function longestWord(string){
+	var array= string.split(' ');
+	var str;
+	var str1 = array[0];
+	var i= 0;
+	while (i< array.length){
+		if (array[i].length>=str1.length){
+          str= array[i];
+	}
+	i++;
+}
+	return str;
+}
+
 
 // 4.Write a function remove that accepts an array and an element, and returns an array with all ocurrences of element removed.
 
@@ -101,10 +116,33 @@ function remove(array, element){
 
 // 5.Write a function evens that accepts an array as an argument, and returns an array consisting of all of the even numbers in that array.
 
+function evens(array){
+	var newArray= [];
+	for (var i = 0; i < array.length; i++){
+		if (array[i]%2 === 0){
+			newArray === newArray.push(array[i]);
 
+		}
+	}
+   return newArray;
+}
+
+function evens(array){
+	var newArray= [];
+	var i= 0;
+	while(i < array.length){
+		if (array[i]%2 === 0){
+			newArray === newArray.push(array[i]);
+		}
+		i++;
+	}
+	return newArray;
+}
 
 // More Practice
 // 1.Write a function called average that takes an array of numbers as a parameter and returns the average of those numbers.
+
+
 
 // 2. Write a function called min that finds the smallest number in an array of numbers.
 
