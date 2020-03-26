@@ -55,31 +55,31 @@ function max(array){
 
 function longestWord(string){
 	var array= string.split(' ');
-	var str;
-	var str1 = array[0];
+	var str1 =[];
+	var str = array[0];
 	
 	for (var i=0; i< array.length; i++){
 		
-		if (array[i].length>=str1.length){
-          str= array[i];
+		if (array[i].length >= str1.length){
+          str1= array[i];
 		}
 		
 	}
-	return str;
+	return str1;
 }
 
 function longestWord(string){
 	var array= string.split(' ');
-	var str;
-	var str1 = array[0];
+	var str1= [];
+	var str = array[0];
 	var i= 0;
 	while (i< array.length){
 		if (array[i].length>=str1.length){
-          str= array[i];
+          str1= array[i];
 	}
 	i++;
 }
-	return str;
+	return str1;
 }
 
 
@@ -146,7 +146,56 @@ function evens(array){
 
 // 2. Write a function called min that finds the smallest number in an array of numbers.
 
+function min(array){
+	var num1= array[0];
+	var num2;
+	for (var i = 0; i< array.length; i++){
+		num2= array[i]
+		num1= Math.min(num1, num2);
+	}
+ return num1;
+}
+
+function min(array){
+	var num1= array[0];
+	var num2;
+	var i= 0;
+	while (i<array.length){
+		num2= array[i];
+		num1= Math.min(num1, num2);
+		i++;
+	}
+	return num1;
+}
+
 // 3.Write a function shortestWord that works like longestWord, but returns the shortest word instead.
+
+function shortestWord(string){
+	var array= string.split(' ');
+	var str1;
+	var str= array[0];
+	for (var i= 0; i < array.length; i++){
+		if(array[i].length < str.length){
+			str1 = array[i];
+		}
+	}
+	return str1;
+}
+
+function shortestWord(string){
+	var array= string.split(' ');
+	var str1;
+	var str= array[0];
+	var i = 0;
+	while (i < array.length){
+		if (array[i].length <= str.length){
+			str1= array[i];
+		}
+		i++;
+	}
+	return str1;
+}	
+
 
 // 4.Write a function countChar that takes two arguments: any string, and a character (string of one letter), and returns the number of times that the character occurs in the string.
 
