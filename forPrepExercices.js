@@ -5,16 +5,19 @@
 
 function sum(array){
 	var result= 0;
-	for (var i= 0; i<=array.length; i++){
-		result+= i;
+	for (var i= 0; i<array.length; i++){
+		result+= array[i];
 	}
 	return result;
 }
+
+
+
 function sum(array){
 	var i=0;
-	var result= 0;
-	while (i<=array.length){
-		result+= i;
+	var result= array[0];
+	while (i<array.length){
+		result+= array[i];
 		i++;
 	}
 	return result;
@@ -142,6 +145,16 @@ function evens(array){
 // More Practice
 // 1.Write a function called average that takes an array of numbers as a parameter and returns the average of those numbers.
 
+function average(array){
+	var result= 0;
+	var total= 0;
+	for (var i= 0; i<array.length; i++){
+		result+= array[i];
+		total= result / array.length;
+	} 
+	return total; 	
+}
+
 
 
 // 2. Write a function called min that finds the smallest number in an array of numbers.
@@ -199,10 +212,59 @@ function shortestWord(string){
 
 // 4.Write a function countChar that takes two arguments: any string, and a character (string of one letter), and returns the number of times that the character occurs in the string.
 
+function countChars(string, character){
+	var count= 0;
+	for (var i= 0; i < string.length; i++){
+		if (string[i]=== character){
+			count++;
+		}
+
+	}
+	return count;
+}
+
+function countChars(string, character){
+	var count= 0;
+	var i= 0;
+	while (i < string.length){
+		if (string[i] === character){
+			count++;
+		}
+
+		i++;
+	}
+	return count;
+}
+
+
 // 5.Write a function evenLengthWords that takes an array of strings as an argument, and returns an array of just the words that have an even length.
+
+function evenLengthWords(array){
+	var newArray= [];
+	for (var i=0; i < array.length; i++){
+		if (array[i].length % 2 === 0){
+			newArray.push(array[i]);
+		}
+	}
+	return newArray;
+}
+
+function evenLengthWords(array){
+	var newArray= []
+	var i= 0;
+	while (i < array.length){
+		if (array[i].length % 2 === 0){
+			newArray.push(array[i]);
+		}
+		i++;
+	}
+	return newArray;
+}
 
 // Advanced
 // 1.Read about the join method on MDN and use it to implement a function that accepts a string as an argument and returns that string reversed
+
+
 
 // 2.Write a function keep that 'keeps' certain elements in an array. The function will need to take two arguments, an array, and something else -- the second argument will be what is used to determine which elements to keep.
 
