@@ -3,7 +3,47 @@
 
 // 1.Write a function sum that computes the sum of the numbers in an array.
 
+function sum(array){
+	var result= 0;
+	for (var i= 0; i<=array.length; i++){
+		result+= i;
+	}
+	return result;
+}
+function sum(array){
+	var i=0;
+	var result= 0;
+	while (i<=array.length){
+		result+= i;
+		i++;
+	}
+	return result;
+}
+
 // 2.Write a function max that accepts an array of numbers and returns the largest number in the array.
+function max(array){
+	var number= array[0];
+	var  num1;
+	for (var i=0; i < array.length; i++){
+		num1= array[i];
+		number = Math.max(number, num1);
+	}
+	return number;
+}
+
+function max(array){
+	var number= array[0];
+	var  num1;
+	var i=0;
+	while ( i < array.length){
+		num1= array[i];
+		 i++;
+		number = Math.max(number, num1);
+	}
+	return number;
+}
+
+
 
 // 3.Try the following at a console:
 
@@ -12,6 +52,11 @@
 //  '1,2,3,4,5,6'.split(',')
 // What is returned by split (You can read more about it here (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) and how does it work?
 //  Use split to write a function longestWord that takes a string as an argument and returns the longest word.
+
+function longestWord(string){
+	
+}
+
 // 4.Write a function remove that accepts an array and an element, and returns an array with all ocurrences of element removed.
 
 // function remove(array, element) {
